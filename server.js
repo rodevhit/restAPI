@@ -39,6 +39,9 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(helmet());
 
+// Initialize DB
+require('./config/dbInit')();
+
 /* Load the routes */
 const AuthRoute = require('./Routes/Auth.route');
 
